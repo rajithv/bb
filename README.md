@@ -1,3 +1,4 @@
+#blah blah
 Symfony Standard Edition
 ========================
 
