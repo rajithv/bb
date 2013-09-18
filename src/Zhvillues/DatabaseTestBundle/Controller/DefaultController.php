@@ -4,6 +4,7 @@ namespace Zhvillues\DatabaseTestBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Zhvillues\DatabaseTestBundle\Entity\Test;
+use Zhvillues\DatabaseTestBundle\Entity\Person;
 use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
@@ -14,7 +15,9 @@ class DefaultController extends Controller
     
         //return $this->createAction($name); 
         
-        return $this->getData($name);
+        //return $this->getData($name);
+        
+        return $this->createPersonAction($name);
     }
     
     public function createAction($name){
@@ -29,6 +32,18 @@ class DefaultController extends Controller
         //return new Response('Created new test object with id'.$test->getId());
         
         return $this->render('ZhvilluesDatabaseTestBundle:Test:joke.html.twig', array('id' => $test->getId()));
+    }
+    
+    public function createPersonAction($name){
+            $person = new Person();
+            $person->setName($name);
+            $person->setAge(22);
+            
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($person);
+            $em->flush();
+            
+            return $this->render('ZhvilluesDatabaseTestBundle:Default:index.html.twig', array('id' => $person->getId()));
     }
     
     public function getData($id){

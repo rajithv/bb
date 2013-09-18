@@ -1,0 +1,16 @@
+Zhvillues\DatabaseTestBundle\Entity\Person:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        age:
+            type: decimal
+    lifecycleCallbacks: {  }
+    
