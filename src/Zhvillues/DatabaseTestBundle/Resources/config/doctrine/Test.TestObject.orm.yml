@@ -1,0 +1,17 @@
+Zhvillues\DatabaseTestBundle\Entity\Test\TestObject:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        number:
+            type: decimal
+            column: Number
+        name:
+            type: string
+            length: 255
+            column: Name
+    lifecycleCallbacks: {  }

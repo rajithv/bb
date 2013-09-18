@@ -1,0 +1,4 @@
+ZhvilluesDatabaseTestBundle:
+    resource: "@ZhvilluesDatabaseTestBundle/Resources/config/routing.yml"
+    prefix: /
+

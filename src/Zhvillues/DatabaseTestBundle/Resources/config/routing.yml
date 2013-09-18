@@ -1,0 +1,11 @@
+zhvillues_database_test_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ZhvilluesDatabaseTestBundle:Default:index }
+
+about:
+    pattern: /about
+    defaults: { _controller: ZhvilluesDatabaseTestBundle:Page:about }
+
+joke:
+    pattern: /joke
+    defaults: { _controller: ZhvilluesDatabaseTestBundle:Page:joke }
